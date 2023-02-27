@@ -1,0 +1,16 @@
+{
+  "name": "remotion-time",
+  "version": "0.0.1",
+  "description": "Time-based hooks for Remotion animations.",
+  "license": "UNLICENSED",
+  "author": "John Dunning (https://github.com/fwextensions)",
+  "repository": "github:fwextensions/remotion-time",
+  "homepage": "https://github.com/fwextensions/remotion-time",
+  "exports": "./index.js",
+  "type": "module",
+  "scripts": {},
+  "peerDependencies": {
+    "react": "^18",
+    "remotion": "^3.3.54"
+  }
+}

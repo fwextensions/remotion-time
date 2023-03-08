@@ -6,11 +6,27 @@
   "author": "John Dunning (https://github.com/fwextensions)",
   "repository": "github:fwextensions/remotion-time",
   "homepage": "https://github.com/fwextensions/remotion-time",
-  "exports": "./index.js",
   "type": "module",
-  "scripts": {},
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/remotion-time.umd.cjs",
+  "module": "./dist/remotion-time.js",
+  "exports": {
+    ".": {
+      "require": "./dist/remotion-time.umd.cjs",
+      "import": "./dist/remotion-time.js"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
   "peerDependencies": {
     "react": "^18",
     "remotion": "^3.3.54"
+  },
+  "devDependencies": {
+    "vite": "^4.1.4"
   }
 }

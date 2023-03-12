@@ -8,7 +8,7 @@ With `remotion-time`, you can change an animation's frames per second value with
 ## Install
 
 ```shell
-npm install fwextensions/remotion-time
+npm install remotion-time
 ```
 
 
@@ -18,8 +18,11 @@ Instead of requiring the exact numbers of frames over which a Remotion function 
 
 - seconds: `s`, `sec`, `second`, `seconds`
 - minutes: `m`, `min`, `minute`, `minutes`
-- start, middle, end of the current duration: `start`, `middle`, `end`
-- percentage of the current duration: `%`
+- hours: `h`, `hr`, `hour`, `hours`
+- start of the current duration: `start`, `beginning`
+- middle of the current duration: `middle`, `half`
+- end of the current duration: `end`, `length`, `duration`
+- percentage of the current duration: `%`, `pct`
 
 Some very basic expressions are also supported, which makes it easier to specify a time in relation to another point, without having to use exact frames.  For example, in a composition that's 10 seconds long at 30fps, the string `"end - 2s"` equates to 240 frames.
 
@@ -76,13 +79,13 @@ function Anim()
 ```
 
 
-### useInterpolate(timeRange, outputRange, options?)
+### useInterpolate(input, output, options?)
 
 Takes the following parameters and returns one or more interpolated values:
 
 - `timeRange`: The time range over which the output values should be interpolated.  If an array with a single value is supplied, the interpolation is made from that starting time to the end of the composition.
 - `outputRange`: The range of output values.  This can be specified using a single array or an object hash of multiple named output ranges.
-- `options`: An optional [options](https://www.remotion.dev/docs/interpolate#options) object.
+- `options`: An optional object with the same keys as [Remotion's `interpolate()` options](https://www.remotion.dev/docs/interpolate#options).
 
 Rather than having to get the current frame and the composition's duration every time you want to interpolate something, the `useInterpolate` hook does that for you.
 

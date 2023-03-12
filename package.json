@@ -10,23 +10,30 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/remotion-time.umd.cjs",
+  "main": "./dist/remotion-time.cjs",
   "module": "./dist/remotion-time.js",
   "exports": {
     ".": {
-      "require": "./dist/remotion-time.umd.cjs",
+      "require": "./dist/remotion-time.cjs",
       "import": "./dist/remotion-time.js"
     }
   },
+  "types": "./dist/remotion-time.d.ts",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build"
+    "dev": "rollup --watch",
+    "build": "rollup -c",
+    "prepack": "npm run build"
   },
   "peerDependencies": {
     "react": "^18",
     "remotion": "^3.3.54"
   },
   "devDependencies": {
-    "vite": "^4.1.4"
+    "@types/react": "^18.0.28",
+    "esbuild": "^0.17.11",
+    "rollup": "^3.19.1",
+    "rollup-plugin-delete": "^2.0.0",
+    "rollup-plugin-dts": "^5.2.0",
+    "rollup-plugin-esbuild": "^5.0.0"
   }
 }

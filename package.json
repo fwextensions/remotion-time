@@ -1,6 +1,6 @@
 {
   "name": "remotion-time",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Time-based hooks for Remotion animations.",
   "keywords": [
     "remotion",
@@ -33,14 +33,14 @@
   },
   "peerDependencies": {
     "react": "^18",
-    "remotion": "^3.3.54"
+    "remotion": "^4"
   },
   "devDependencies": {
-    "@types/react": "^18.0.28",
-    "esbuild": "^0.17.11",
-    "rollup": "^3.19.1",
+    "@types/react": "^18.2.21",
+    "esbuild": "^0.19.2",
+    "rollup": "^3.28.1",
     "rollup-plugin-delete": "^2.0.0",
-    "rollup-plugin-dts": "^5.2.0",
+    "rollup-plugin-dts": "^6.0.1",
     "rollup-plugin-esbuild": "^5.0.0"
   }
 }

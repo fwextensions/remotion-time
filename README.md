@@ -27,17 +27,16 @@ Instead of requiring the exact numbers of frames over which a Remotion function 
 Some very basic expressions are also supported, which makes it easier to specify a time in relation to another point, without having to use exact frames.  For example, in a composition that's 10 seconds long at 30fps, the string `"end - 2s"` equates to 240 frames.
 
 
-### useConfig(configString)
+### useTimeConfig(configString)
 
 Takes a string specifying the length and FPS of the `Composition` in the form `"<time> @ <number> fps"`, and returns an object containing the equivalent `durationInFrames` and `fps` properties.  This object can then be spread on the `Composition`.
 
 ```js
 import { Composition } from "remotion";
-import { useConfig } from "remotion-time";
+import { useTimeConfig } from "remotion-time";
 
-function Root()
-{
-  const config = useConfig("6s @ 30fps");
+function Root() {
+  const config = useTimeConfig("6s @ 30fps");
 
   return (
     <Composition
@@ -61,8 +60,7 @@ In the example below, the first `Sequence` lasts for however many frames equals 
 import { AbsoluteFill, Sequence } from "remotion";
 import { useTime } from "remotion-time";
 
-function Anim()
-{
+function Anim() {
   const t = useTime();
 
   return (
